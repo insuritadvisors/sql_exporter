@@ -3,6 +3,7 @@ MAINTAINER Vasilis Stergioulis
 ADD ojdbc7.jar ${PAYARA_HOME}/domains/${DOMAIN_NAME}/lib/ext
 ENV PAYARA_JDBC_NAME jdbc/somedb
 ENV PAYARA_DB_URL "user=hr:password=hr:url='jdbc:oracle:thin:@localhost:1521:XE'"
+ENV TZ 'Europe/Athens'
 RUN asadmin start-domain ${DOMAIN_NAME} && \
 asadmin create-jdbc-connection-pool \
 --datasourceclassname=oracle.jdbc.pool.OracleDataSource \
