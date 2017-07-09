@@ -26,7 +26,6 @@ public class MetricsResource {
     ManagedExecutorService executorService;
 
     @GET
-    @Consumes(value = MediaType.TEXT_PLAIN)
     @Produces(value = MediaType.TEXT_PLAIN)
     public void get(@Suspended final AsyncResponse asyncResponse) {
         executorService.submit(() -> {
